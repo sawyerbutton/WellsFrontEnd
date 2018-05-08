@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <span>Wellness Pavilion</span>
+  <span class="fill-remaining-space"></span>
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon class="side-icon">verified_user</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu" xPosition="before">
+    <button mat-menu-item>Profile</button>
+    <button mat-menu-item (click)="logout()">Logout</button>
+  </mat-menu>
+</mat-toolbar>

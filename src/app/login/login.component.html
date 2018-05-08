@@ -1,0 +1,43 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-header>
+      Wells Pavilion
+    </mat-card-header>
+    <mat-card-content>
+      <div class="login-form">
+        <form [formGroup]="loginForm">
+          <mat-form-field style="width: 100%;">
+            <input matInput placeholder="Username" formControlName="userName" required>
+            <mat-hint>Username is required</mat-hint>
+            <!--<mat-error *ngIf="">-->
+              <!--Username is <strong>required</strong>-->
+            <!--</mat-error>-->
+          </mat-form-field>
+          <br><br>
+          <mat-form-field style="width: 100%;">
+            <input matInput placeholder="Password" formControlName="password" required>
+            <mat-hint>Password is required</mat-hint>
+            <!--<mat-error *ngIf="loginForm.controls.hasError('required')">-->
+              <!--Username is <strong>required</strong>-->
+            <!--</mat-error>-->
+          </mat-form-field>
+          <br><br>
+          <mat-form-field style="width: 100%;">
+            <mat-select [(value)]="Role" placeholder="Select Your Role" formControlName="role">
+              <mat-option>None</mat-option>
+              <mat-option value="admin">Administrator</mat-option>
+              <mat-option value="clinician">Clinician</mat-option>
+              <mat-option value="frontDesk">Front Desk</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <br><br>
+          <div>
+            <button mat-raised-button color="primary" [disabled]="loginForm.invalid" (click)="login()">LogIn</button>
+            <span style="padding-left: 30px"></span>
+            <button mat-raised-button color="accent">Forget Password</button>
+          </div>
+        </form>
+      </div>
+    </mat-card-content>
+  </mat-card>
+</div>

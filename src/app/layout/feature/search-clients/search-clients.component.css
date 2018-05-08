@@ -1,0 +1,23 @@
+.searchClient-container {
+  width: 80%;
+  margin-left: 10%;
+  margin-top:5%
+}
+
+.search-client-table{
+  display: flex;
+  flex-direction: column;
+  max-height: 500px;
+  min-width: 300px;
+  overflow: auto;
+}
+
+.filter-header {
+  min-height: 64px;
+  padding: 8px 24px 0;
+  width: 100%;
+}
+
+.search-area{
+  padding: 8px 24px 0;
+}

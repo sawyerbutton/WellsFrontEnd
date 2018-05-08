@@ -1,0 +1,8 @@
+.side-nav {
+  position: absolute;
+  top: 72px;
+  bottom: 0;
+  left: 10px;
+  right: 0;
+  background: #eee;
+}

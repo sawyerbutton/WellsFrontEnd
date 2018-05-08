@@ -1,0 +1,19 @@
+<mat-sidenav-container class="side-nav">
+  <mat-sidenav mode="side" opened>
+    <br><br>
+    <div style="width: 100%">
+      <button mat-raised-button color="primary" style="width:100%" routerLink="searchClient" routerLinkActive="true">Search Client</button>
+    </div>
+    <br><br>
+    <div style="width: 100%">
+      <button mat-raised-button color="primary" style="width:100%" routerLink="addClient" routerLinkActive="true">Add Client</button>
+    </div>
+    <br><br>
+    <div style="width: 100%">
+      <button mat-raised-button color="primary" style="width:100%" routerLink="viewAppointment" routerLinkActive="true">View Appointment</button>
+    </div>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>
