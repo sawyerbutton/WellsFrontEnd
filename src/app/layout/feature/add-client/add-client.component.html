@@ -1,1 +1,133 @@
-
+<div class="searchClient-container">
+  <mat-card style="width:100%">
+    <mat-card-content style="width:100%">
+      <form [formGroup]="mainForm">
+        <div class="name-input">
+          <mat-form-field style="padding-right:15px">
+            <input matInput placeholder="First Name" formControlName="FirstName" name="FirstName">
+          </mat-form-field>
+          <mat-form-field style="padding-right:15px">
+            <input matInput placeholder="Middle Name" formControlName="MiddleName" name="MiddleName">
+          </mat-form-field>
+          <mat-form-field style="padding-right:15px">
+            <input matInput placeholder="Last Name" formControlName="LastName" name="LastName">
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width: 50%">
+            <input matInput [matDatepicker]="picker" placeholder="Choose a date" formControlName="Birthday" name="Birthday">
+            <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width: 50%">
+            <mat-select formGroupName="Gender" placeholder="Gender" name="Gender">
+              <mat-option value="male">Male</mat-option>
+              <mat-option value="female">Female</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width: 50%">
+            <span matPrefix>+1 &nbsp;</span>
+            <input type="tel" matInput placeholder="Telephone" formControlName="Phone" name="Phone">
+            <mat-icon matSuffix>mode_edit</mat-icon>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width: 50%">
+            <input type="tel" matInput placeholder="Email" formControlName="Email" name="Email">
+            <mat-icon matSuffix>mail</mat-icon>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="width: 50%">
+            <mat-select formGroupName="Race" placeholder="Race and Ethnicity" name="Race&Ethinicity">
+              <mat-option value="male">Asian</mat-option>
+              <mat-option value="female">Native American</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="padding-right:15px">
+            <input matInput placeholder="Address One" formControlName="AddressOne" name="AddressOne">
+          </mat-form-field>
+          <mat-form-field style="padding-right:15px">
+            <input matInput placeholder="Address Two" formControlName="AddressTwo" name="AddressTwo">
+          </mat-form-field>
+          <br>
+          <mat-form-field style="padding-right:15px">
+            <input matInput placeholder="State" formControlName="State" name="State">
+          </mat-form-field>
+          <mat-form-field style="padding-right:15px">
+            <input matInput placeholder="City" formControlName="City" name="City">
+          </mat-form-field>
+          <mat-form-field style="padding-right:15px">
+            <input matInput placeholder="ZipCode" formControlName="ZipCode" name="ZipCode">
+          </mat-form-field>
+        </div>
+        <div>
+          <span>Living Arrangement</span>
+          <br><br>
+          <mat-radio-group [value]="livingArrangement">
+            <mat-radio-button value="alone">Alone</mat-radio-button>
+            <mat-radio-button value="withSpouseOrUnrelatedPartner">With Spouse or Unrelated Partner</mat-radio-button>
+            <br>
+            <mat-radio-button value="withChildren">With Children</mat-radio-button>
+            <mat-radio-button value="withParentsOrGuardian">With Parents or Guardian</mat-radio-button>
+            <br>
+            <mat-radio-button value="withRelativesOtherThanSpouseChildrenParents">With Relatives other than Spouse,Children or Parents</mat-radio-button>
+            <mat-radio-button value="withNonRelatives">With Non-relatives</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <div>
+          <mat-form-field style="width: 50%">
+            <mat-select formGroupName="Residential" placeholder="Residential and condition" name="Residential&Condition">
+              <mat-option value="oneStory">One Story(no stairs)</mat-option>
+              <mat-option value="nothing">undefined</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="padding-right:15px">
+            <mat-select formGroupName="Martial" placeholder="Martial Status" name="Martial&Status">
+              <mat-option value="married">married</mat-option>
+              <mat-option value="nothing">undefined</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field style="padding-right:15px">
+            <mat-select formGroupName="LivingTogether" placeholder="Living Together" name="LivingTogether">
+              <!--<mat-option value="married">married</mat-option>-->
+              <mat-option value="nothing">undefined</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <mat-form-field style="padding-right:15px">
+            <mat-select formGroupName="Employment" placeholder="Employment condition" name="EmploymentStatus">
+              <mat-option value="married">married</mat-option>
+              <mat-option value="nothing">undefined</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <mat-form-field style="padding-right:15px">
+            <mat-select formGroupName="PartTime" placeholder="Part time" name="PartTime">
+              <!--<mat-option value="married">married</mat-option>-->
+              <mat-option value="partTime">Part time</mat-option>
+              <mat-option value="fullTime">Full time</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div>
+          <!--<span>Additional Information</span>-->
+          <mat-form-field style="width:80%">
+            <textarea matInput placeholder="Additional Information"></textarea>
+          </mat-form-field>
+        </div>
+        <div>
+          <button mat-raised-button color="primary" (click)="submit()">Submit</button>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

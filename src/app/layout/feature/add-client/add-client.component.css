@@ -1,3 +1,18 @@
-.addClient-container{
-  width: 80%;
+.searchClient-container{
+  width: 60%;
+  margin-left: 20%;
+  margin-top:5%
+}
+
+.name-input {
+  width:100%;
+}
+
+span {
+  padding-right: 15px;
+  width:50px;
+}
+
+.mat-radio-button {
+  padding-right:15px;
 }
